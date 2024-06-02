@@ -1,25 +1,4 @@
-#!/data/data/com.termux/files/glibc/bin/bash
-clear
-# Function to adjust text size based on screen width
-adjust_text_size() {
-    if command -v stty &> /dev/null; then
-        screen_width=$(stty size | awk '{print $2}')
-    else
-        echo "Error: stty command not found. Unable to get screen width."
-        return
-    fi
-
-    if [ -n "$screen_width" ] && [ "$screen_width" -lt 40 ]; then
-        text_size="Small"
-    elif [ -n "$screen_width" ] && [ "$screen_width" -lt 80 ]; then
-        text_size="Medium"
-    else
-        text_size="Large"
-    fi
-
-    echo "Detected screen width: $screen_width"
-    echo "Adjusted text size: $text_size"
-}
+#!/bin/bash
 
 cd /data/data/com.termux/files
 echo "Downloading update file"
