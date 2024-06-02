@@ -5,7 +5,6 @@ echo "Downloading update file"
 
 wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
 mv start opt/Scripts
-rm -rf update
+rm -rf $HOME/update
 echo "Done"
-x11
-
+echo "Go Fap again with x11"
