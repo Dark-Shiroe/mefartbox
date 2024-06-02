@@ -5,5 +5,5 @@ installing mefartbox
 
 updating
 '''
-> curl -o install https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/update && chmod +x update && ./update
+> curl -o update https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/update && chmod +x update && ./update
 
