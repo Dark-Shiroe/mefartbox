@@ -3,11 +3,9 @@
 cd /data/data/com.termux/files
 echo "Downloading update file"
 
-wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/update
 wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
-mv update opt/Scripts
 mv start opt/Scripts
-
+rm -rf update
 echo "Done"
 x11
 
