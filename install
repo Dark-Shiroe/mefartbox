@@ -75,6 +75,8 @@ wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/downlo
 tar -xf Box64Droid01.tar.gz -C /sdcard
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/locale.7z
 7z x locale.7z -o$PREFIX/glibc/lib/locale
+wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
+mv start opt/Scripts
 
 echo "Removing Scratch"
 rm -rf install
