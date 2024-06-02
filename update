@@ -1,4 +1,5 @@
 #!/bin/bash
+## This page for example updating file command
 
 cd /data/data/com.termux/files
 echo "Downloading update file"
