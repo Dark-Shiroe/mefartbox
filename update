@@ -9,5 +9,5 @@ mv update opt/Scripts
 mv start opt/Scripts
 
 echo "Done"
-. $FILES/opt/Scripts/start
+. x11
 
