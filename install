@@ -69,6 +69,8 @@ wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/downlo
 tar xf sharefont.tar.gz
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/gen.tar.gz
 tar xf gen.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/Box64Droid01.tar.gz
+tar -xf Box64Droid01.tar.gz -C /sdcard
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/locale.7z
 7z x locale.7z -o$PREFIX/glibc/lib/locale
 
@@ -87,6 +89,7 @@ rm -rf rootfolder.tar.gz
 rm -rf etcfonts.tar.gz
 rm -rf sharefont.tar.gz
 rm -rf gen.tar.gz
+rm -rf Box64Droid01.tar.gz
 rm -rf locale.7z
 cd
 
