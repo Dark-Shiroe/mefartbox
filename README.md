@@ -4,6 +4,7 @@ curl -o install https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/ins
 "
 
 
+
 updating
 "
 curl -o install https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/update && chmod +x update && ./update
