@@ -4,8 +4,9 @@
 cd /data/data/com.termux/files
 echo "Downloading update file"
 
-wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
-mv start opt/Scripts
+wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/fixlocale.tar.gz
+tar xf fixlocale.tar.gz
+rm -rf fixlocale.tar.gz
 rm -rf $HOME/update
 echo "Done"
 echo "Go Fap again with x11"
