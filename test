@@ -30,8 +30,65 @@ wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/downlo
 tar -xf bin.tar.gz -C $HOME
 wget -q --show-progress https://github.com/mebabo1/menano/releases/download/Box/glibc.tar.xz
 tar xf glibc.tar.xz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optapps.tar.gz
+tar xf optapps.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optlibs.tar.gz
+tar xf optlibs.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optprefix.tar.gz
+tar xf optprefix.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optScripts.tar.gz
+tar xf optScripts.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optShortcuts.tar.gz
+tar xf optShortcuts.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optother.tar.gz
+tar xf optother.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/wine.tar.xz
+tar xf wine.tar.xz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/rootfolder.tar.gz
+tar xf rootfolder.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/fonts.tar.xz
+mv fonts.tar.xz opt/prefix
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/etcfonts.tar.gz
+tar xf etcfonts.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/sharefont.tar.gz
+tar xf sharefont.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/gen.tar.gz
+tar xf gen.tar.gz
+wget -q --show-progress https://github.com/mebabo1/menano/releases/download/Box/python.tar.gz
+tar xf python.tar.gz
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/Box64Droid01.tar.gz
+tar -xf Box64Droid01.tar.gz -C /sdcard
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/locale.7z
+7z x locale.7z -o$PREFIX/glibc/lib/locale
+wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
+mv start opt/Scripts
+wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/fixlocale.tar.gz
+tar xf fixlocale.tar.gz
+wget https://github.com/mebabo1/menano/releases/download/Box/alsa.tar
+tar xf alsa.tar
 
+echo "Removing Scratch"
+rm -rf install
+rm -rf bin.tar.gz
+rm -rf glibc.tar.xz
+rm -rf optapps.tar.gz
+rm -rf optlibs.tar.gz
+rm -rf optprefix.tar.gz
+rm -rf optScripts.tar.gz
+rm -rf optShortcuts.tar.gz
+rm -rf optother.tar.gz
+rm -rf wine.tar.xz
+rm -rf rootfolder.tar.gz
+rm -rf etcfonts.tar.gz
+rm -rf sharefont.tar.gz
+rm -rf gen.tar.gz
+rm -rf python.tar.gz
+rm -rf Box64Droid01.tar.gz
+rm -rf locale.7z
+rm -rf fixlocale.tar.gz
+rm -rf alsa.tar
 cd
 
 echo "Done"
 echo "To start MeFartBox run 'x11'"
+echo "To setup dynarec run x44"
