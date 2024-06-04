@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Installing termux-am"
-pkg install termux-am -y &>/dev/null
-
 termux-setup-storage & sleep 4 &>/dev/null
 
 while true; do
@@ -19,25 +16,13 @@ apt-get clean
 apt-get update >/dev/null 2>&1
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
 pkg install x11-repo -y &>/dev/null
-pkg install pulseaudio -y &>/dev/null
+pkg install termux-am -y &>/dev/null
+pkg install xorg-xrandr -y &>/dev/null
+pkg install termux-x11-nightly -y &>/dev/null
 pkg install nano pulseaudio -y &>/dev/null
-pkg install xwayland -y &>/dev/null
-pkg install wget -y &>/dev/null
-pkg install tsu -y &>/dev/null
-pkg install root-repo -y &>/dev/null
 pkg install patchelf -y &>/dev/null
 pkg install p7zip -y &>/dev/null
-pkg install xorg-xrandr -y &>/dev/null
-pkg install ncurses-utils -y &>/dev/null
-pkg install hashdeep -y &>/dev/null
-pkg install termux-x11-nightly -y &>/dev/null
-pkg install python nmap vulkan-tools -y &>/dev/null
-pkg install git python -y &>/dev/null
-pkg install coreutils -y &>/dev/null
-pkg install socat -y &>/dev/null
-pip install objgraph &>/dev/null
-pip install aiofiles &>/dev/null
-pip install blessings &>/dev/null
+pkg install wget -y &>/dev/null
 
 echo "Downloading MeFartBox"
 cd /data/data/com.termux/files
@@ -77,6 +62,10 @@ wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/downlo
 7z x locale.7z -o$PREFIX/glibc/lib/locale
 wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
 mv start opt/Scripts
+wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/fixlocale.tar.gz
+tar xf fixlocale.tar.gz
+wget https://github.com/mebabo1/menano/releases/download/Box/alsa.tar
+tar xf alsa.tar
 
 echo "Removing Scratch"
 rm -rf install
@@ -96,7 +85,10 @@ rm -rf gen.tar.gz
 rm -rf python.tar.gz
 rm -rf Box64Droid01.tar.gz
 rm -rf locale.7z
+rm -rf fixlocale.tar.gz
+rm -rf alsa.tar
 cd
 
 echo "Done"
 echo "To start MeFartBox run 'x11'"
+echo "To setup dynarec run x44"
