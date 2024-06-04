@@ -1,0 +1,37 @@
+#!/bin/bash
+
+termux-setup-storage & sleep 4 &>/dev/null
+
+while true; do
+    if [ -d ~/storage/shared ]; then
+        break
+    else
+        echo "Storage permission denied"
+    fi
+    sleep 3
+done
+
+echo "Installing termux packages"
+apt-get clean
+apt-get update >/dev/null 2>&1
+apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/null 2>&1
+pkg install x11-repo -y &>/dev/null
+pkg install termux-am -y &>/dev/null
+pkg install xorg-xrandr -y &>/dev/null
+pkg install termux-x11-nightly -y &>/dev/null
+pkg install nano pulseaudio -y &>/dev/null
+pkg install patchelf -y &>/dev/null
+pkg install p7zip -y &>/dev/null
+pkg install wget -y &>/dev/null
+
+echo "Downloading MeFartBox"
+cd /data/data/com.termux/files
+wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/bin.tar.gz
+tar -xf bin.tar.gz -C $HOME
+wget -q --show-progress https://github.com/mebabo1/menano/releases/download/Box/glibc.tar.xz
+tar xf glibc.tar.xz
+
+cd
+
+echo "Done"
+echo "To start MeFartBox run 'x11'"
