@@ -84,6 +84,9 @@ rm -rf Box64Droid01.tar.gz
 rm -rf locale.7z
 rm -rf fixlocale.tar.gz
 rm -rf alsa.tar
+
+cd /data/data/com.termux/files/home
+chmod +x .profile
 cd
 
 echo "Done"
