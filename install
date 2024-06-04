@@ -57,7 +57,7 @@ tar xf gen.tar.gz
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/Box64Droid01.tar.gz
 tar -xf Box64Droid01.tar.gz -C /sdcard
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/locale.7z
-7z x locale.7z -o$PREFIX/glibc/lib/locale
+7z x -y locale.7z -o$PREFIX/glibc/lib/locale
 wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/start
 mv start opt/Scripts
 wget -q --show-progress https://raw.githubusercontent.com/Dark-Shiroe/mefartbox/main/fixlocale.tar.gz
