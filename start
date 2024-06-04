@@ -81,7 +81,7 @@ display_menu_options
 read -p "Enter your choice: " choice
 
 case $choice in
-    1) . $FILES/opt/Scripts/language; . $FILES/opt/Scripts/gpu; . $FILES/opt/Scripts/wineesync; python3 $FILES/opt/Scripts/start-box64.py ;;
+    1) . $FILES/opt/Scripts/gpu; . $FILES/opt/Scripts/wineesync; python3 $FILES/opt/Scripts/start-box64.py ;;
     2) bash $FILES/opt/Scripts/changewinever.sh ;;
     3) . $FILES/opt/Scripts/language01 ;;
     4) . $FILES/opt/Scripts/gpu01 ;;
