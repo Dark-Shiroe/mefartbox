@@ -25,9 +25,11 @@ pkg install p7zip -y &>/dev/null
 pkg install wget -y &>/dev/null
 
 echo "Downloading MeFartBox"
-cd /data/data/com.termux/files
+cd /data/data/com.termux/files/home
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/bin.tar.gz
-tar -xf bin.tar.gz -C $HOME
+tar xf bin.tar.gz
+chmod +x .profile
+cd /data/data/com.termux/files
 wget -q --show-progress https://github.com/mebabo1/menano/releases/download/Box/glibc.tar.xz
 tar xf glibc.tar.xz
 wget -q --show-progress https://github.com/Dark-Shiroe/mefartbox/releases/download/mefartbox/optapps.tar.gz
@@ -85,8 +87,6 @@ rm -rf locale.7z
 rm -rf fixlocale.tar.gz
 rm -rf alsa.tar
 
-cd /data/data/com.termux/files/home
-chmod +x .profile
 cd
 
 echo "Done"
