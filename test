@@ -25,6 +25,7 @@ pkg install p7zip -y &>/dev/null
 pkg install wget -y &>/dev/null
 
 echo "Downloading MeFartBox"
+cd /data/data/com.termux/files/home
 wget -q --show-progress https://github.com/mebabo1/menano/releases/download/Box/bin.tar.gz
 tar xf bin.tar.gz
 x33
