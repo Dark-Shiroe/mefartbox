@@ -25,6 +25,9 @@ pkg install nano pulseaudio -y &>/dev/null
 pkg install patchelf -y &>/dev/null
 pkg install p7zip -y &>/dev/null
 pkg install wget -y &>/dev/null
+pkg install python -y &>/dev/null
+pkg install python-pip -y &>/dev/null
+pip install psutil
 
 echo "Downloading MeFartBox"
 cd /data/data/com.termux/files/home
